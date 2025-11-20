@@ -1,0 +1,27 @@
+<app-topheader></app-topheader>
+<app-header></app-header>
+<top-menu></top-menu>
+<product-list></product-list>
+<app-parent></app-parent>
+
+<div class="container">
+    <app-demo [message]="InputVal" *ngIf="!toDestroy">
+        <p #childMsg>User has entered the following text: {{ InputVal }}</p>
+    </app-demo>
+
+    <input type="text" #MyTestBox (focus)="0"> 
+    <button (click)="btnClick(MyTestBox.value)">Submit</button>
+        <br><br>
+
+    <button (click)="DestroyComponent()">Show/Hide</button>
+</div>
+<!--Custom class-->
+<h2 class="Customs">Custom class & Style Directives</h2>
+
+<div appclass [display]="{'app-container': true, 'apphighlight':false, appfont: 5 > 2 }">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+        quas eius sint libero magnam quibusdam quasi fuga incidunt quod rerum?
+        Autem atque similique!.
+    </p>
+</div>

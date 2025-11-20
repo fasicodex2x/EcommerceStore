@@ -1,0 +1,75 @@
+ <app-search (searchChange)="onSearch($event)"></app-search>
+
+<!-- Product list -->
+<div class="product-list">
+  <div class="product-card" *ngFor="let item of filteredProducts" (click)="openSpecs(item)">
+    <div class="discount price">30% OFF</div>
+    <img [src]="item.image" [alt]="item.name">
+    <h3>{{ item.name }}</h3>
+    <p class="price">Rs. {{ item.price }}</p>
+    <p class="color">Color: {{ item.color }}</p>
+    <p class="stock">Stock: {{ item.stock }}</p>
+  </div>
+</div>
+
+<!-- Specs Popup -->
+<div class="spec-popup" *ngIf="selectedProduct">
+  <div class="spec-content">
+    <button class="close-btn" (click)="closeSpecs()">✖</button>
+
+    <img 
+      [src]="selectedProduct.image"
+      class="spec-img"
+      [style.filter]="'opacity(40%) drop-shadow(0 0 0 ' + selectedColor + ') saturate(250%)'"
+    />
+
+    <h2>{{ selectedProduct.name }}</h2>
+    <p><strong>Price:</strong> Rs. {{ selectedProduct.price }}</p>
+
+    <!-- Color selection -->
+    <p><strong>Select Color:</strong></p>
+    <div class="color-options">
+      <span 
+        *ngFor="let color of selectedProduct.colors"
+        class="color-circle"
+        [ngClass]="{'selected': color === selectedColor}"
+        [style.background]="color.toLowerCase()"
+        (click)="selectedColor = color">
+      </span>
+    </div>
+
+    <!-- Quantity Selection -->
+    <div class="qty">
+      <button class="qty-btn minus" (click)="decreaseQty()">−</button>
+      <input class="qty-input" type="number" [value]="quantity" min="1" readonly>
+      <button class="qty-btn plus" (click)="increaseQty()">+</button>
+    </div>
+
+    <!-- Buy Button -->
+    <button class="buy" (click)="buyProduct(selectedProduct)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+<!-- Featured brands -->
+<div class="ekart-featured-product">
+  <div class="left-section">
+    <h2>Latest Arrival in Popular Brands</h2>
+  </div>
+
+  <featured-brands>
+    <h5 class="title">New Arrivals in Reebok</h5>
+    <button class="btn-learn">show arrival in reebok</button>
+  </featured-brands>
+
+  <featured-brands>
+    <h5 class="title">New Arrivals in Adidas</h5>
+    <button class="btn-learn">show arrival in adidas</button>
+  </featured-brands>
+
+  <featured-brands>
+    <h5 class="title">New Arrivals in Nikkie</h5>
+    <button class="btn-learn">show arrival in nikkie</button>
+  </featured-brands>
+</div>

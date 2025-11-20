@@ -1,0 +1,77 @@
+.container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #1976d2; 
+  border-radius: 10px;
+}
+.container input[type="text"] {
+  width: 250px;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.container button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.container button:hover {
+  background-color: #555;
+}
+.demo {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+  
+  background-color: black;
+  font-size: 14px;
+  line-height: 1.5;
+}
+demo p {
+  color: white;
+  font-weight: bold;
+}
+.container p {
+  margin-top: 10px;
+    font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+.container button:last-child {
+  margin-top: 20px;
+  background-color: black;
+}
+
+.container button:last-child:hover {
+  background-color: #555;
+}
+ .Customs {
+  text-align: center;
+  margin: 50px 50px;
+  font-family: 'Courier New', Courier, monospace;
+  color: red;
+}
+.apphighlight{
+  background-color: #1976d2;
+  border: 3px solid black;
+}
+.apphighlight p{
+  color: white;
+}
+.app-container{
+  margin:20px 50px ;
+  padding:  10px 20px;
+
+}
+.appFont {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+}

@@ -1,0 +1,32 @@
+ .product-card1 {
+  background-color: rgb(14, 10, 10);
+  color: rgb(76, 125, 141);
+  width: 100%;
+  max-width: 330px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: left;
+  height: 320px;
+}
+.product-card1 title {
+font-family: 'Courier New', Courier, monospace;
+color: rgb(138, 138, 226);
+}
+
+.product-card1 p {
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+.btn-learn {
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-style:italic;
+}
+.btn-learn:hover {
+  background-color: lightblue;
+}

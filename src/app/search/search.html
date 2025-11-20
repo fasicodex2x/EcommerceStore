@@ -1,0 +1,10 @@
+<div class="search-product">
+  <input
+    class="search-input"
+    type="text"
+ placeholder="search produc.."
+    (input)="onSearchChange($event)"
+  />
+  <button class="btn btn-search">Search</button>
+</div>
+<div class="search-result-for"><p><strong>search result for:</strong>{{  searchTerm }}</p></div>
