@@ -39,7 +39,15 @@ export class AppComponent {
   ngAfterViewInit(){
 //console.log('ngAfterViewInit Test Called');
   }
- 
+  showAdmin: boolean = false;          // <<< add this
+
+  // ...
+
+  onSubscribeFromHeader() {            // <<< add this
+    this.showAdmin = true;
+    // if you want to toggle instead of always show:
+    // this.showAdmin = !this.showAdmin;
+  }
  btnClick(MyTestBox :string)
   {
     //console.log(MyTestBox);

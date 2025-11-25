@@ -1,11 +1,8 @@
-<!--<div class="admin-user-list" *ngFor="let user of userlist">-->
-  <div class="admin-user-name">{{ user.name }}</div>
-  <div class="admin-user-gender">{{ user.gender }}</div>
-  <div class="admin-user-subtype">{{ user.subtype }}</div>
-  <div class="admin-user-active">{{ user.active }}</div>
+<div 
+  class="admin-user-card" 
+  *ngFor="let user of userlist; ">
 
-  <button class="admin-user-show-detail-btn" 
-  (click)="showUserDetail(user)">+</button>
+  <div class="user-field name">{{ user.name }}</div>
+  <div class="user-field gender">{{ user.gender }}</div>
+  <div class="user-field subtype">{{ user.subtype }}</div>
 </div>
-
-
