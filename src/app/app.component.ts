@@ -42,7 +42,7 @@ export class AppComponent {
   showAdmin: boolean = false;          // <<< add this
 
   // ...
-
+// lk
   onSubscribeFromHeader() {            // <<< add this
     this.showAdmin = true;
     // if you want to toggle instead of always show:
